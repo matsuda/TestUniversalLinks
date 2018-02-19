@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func tapButton(_ sender: Any) {
+        let path = "https://universal-links-site.s3.amazonaws.com/index.html"
+        let url = URL(string: path)!
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
 }
-
