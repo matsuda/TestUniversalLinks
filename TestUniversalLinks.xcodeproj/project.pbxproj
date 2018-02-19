@@ -22,6 +22,7 @@
 		96D0CC09203AA70D00CE302E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96D0CC0C203AA70D00CE302E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96D0CC0E203AA70D00CE302E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96D0CC14203AAA2D00CE302E /* TestUniversalLinks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestUniversalLinks.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		96D0CC01203AA70D00CE302E /* TestUniversalLinks */ = {
 			isa = PBXGroup;
 			children = (
+				96D0CC14203AAA2D00CE302E /* TestUniversalLinks.entitlements */,
 				96D0CC02203AA70D00CE302E /* AppDelegate.swift */,
 				96D0CC04203AA70D00CE302E /* ViewController.swift */,
 				96D0CC06203AA70D00CE302E /* Main.storyboard */,
@@ -97,6 +99,11 @@
 					96D0CBFE203AA70D00CE302E = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -274,7 +281,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestUniversalLinks/TestUniversalLinks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5YDXJ82CD;
 				INFOPLIST_FILE = TestUniversalLinks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.matsuda.TestUniversalLinks;
@@ -288,7 +297,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestUniversalLinks/TestUniversalLinks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5YDXJ82CD;
 				INFOPLIST_FILE = TestUniversalLinks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.matsuda.TestUniversalLinks;
