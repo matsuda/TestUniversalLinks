@@ -87,6 +87,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         log(#function)
         if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
             log("webpageURL >>> \(userActivity.webpageURL!)")
+            if #available(iOS 11.0, *) {
+                if let url = userActivity.referrerURL {
+                    log("referrerURL >>> \(url)")
+                }
+            }
         }
         return true
     }

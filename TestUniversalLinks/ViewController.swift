@@ -23,6 +23,10 @@ class ViewController: UIViewController {
     @IBAction func tapButton(_ sender: Any) {
         let path = "https://universal-links-site.s3.amazonaws.com/index.html"
         let url = URL(string: path)!
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
 }
