@@ -77,6 +77,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        log(#function)
+        return self.application(app, open: url, sourceApplication: options[.sourceApplication] as? String, annotation: "")
+    }
+
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        log(#function)
+        return false
+    }
+
     func application(_ application: UIApplication, willContinueUserActivityWithType userActivityType: String) -> Bool {
         log(#function)
         log("userActivityType >>> \(userActivityType)")
